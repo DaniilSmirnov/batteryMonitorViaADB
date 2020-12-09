@@ -17,7 +17,7 @@ for device in devices:
     if i == iter_count:
         break
 
-    print('###' + str(datetime.datetime.now()))
+    print(str(datetime.datetime.now().hour) + ":" + str(datetime.datetime.now().minute))
     print(device.get_serial_no())
     print(device.get_battery_level())
 
