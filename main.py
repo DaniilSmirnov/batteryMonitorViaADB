@@ -18,6 +18,6 @@ while i != iter_count:
         print('device ' + str(device.get_serial_no()))
         print('battery ' + str(device.get_battery_level()))
 
-        sleep(60)  # интервал в 10 минут
+        sleep(600)  # интервал в 10 минут
 
     i += 1
