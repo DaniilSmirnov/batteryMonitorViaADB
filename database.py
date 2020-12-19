@@ -7,7 +7,7 @@ def get_conn():
 
 
 def create_db():
-    print('recreate')
+    print('Creating database')
 
     conn, cursor = get_conn()
 
