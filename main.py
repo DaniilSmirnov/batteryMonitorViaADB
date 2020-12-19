@@ -6,18 +6,16 @@ import os
 
 from database import update_device_state, get_devices_state
 
-os.remove("stats.db")
+iter_count = 30  # Количество промежутков для измерения
+minutes = 1  # Количество минут между измерениями
 
 client = AdbClient(host="127.0.0.1", port=5037)
-
 # client.remote_connect("172.24.62.148", 5555)  # подсоединяем девайсы по adb via wifi
 # client.remote_connect("172.24.62.149", 5555)
 
+os.remove("stats.db")
 connected_devices = client.devices()
-
 i = 0
-iter_count = 30  # Количество промежутков для измерения
-minutes = 1  # Количество минут между измерениями
 
 print("Started at {0}:{1}".format(datetime.datetime.now().hour, datetime.datetime.now().minute))
 while i != iter_count:
